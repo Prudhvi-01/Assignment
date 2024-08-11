@@ -1,0 +1,65 @@
+<!-- views/student.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><%= schoolName%></h1>
+
+        <h1>Welcome, <%= studentName %></h1>
+
+        <!-- Display student's classes -->
+        <% classes.forEach(classroom => { %>
+            <div class="card">
+                <h2>Class: <%= classroom.name %></h2>
+                <h3>Timings: <%= classroom.timings %></h3>
+                <h4>Teacher: <%= classroom.teacher.name %></h4>
+
+                <h4>Students in this class:</h4>
+                <ul>
+                    <% classroom.students.forEach(student => { %>
+                        <li><%= student.name %></li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
