@@ -24,7 +24,7 @@ mongoose.connect('mongodb+srv://prudhvi:oxHbUdozYPR0459t<password>@cluster0.97zy
     console.log(err);
  })
 
-app.get("/login",(req,res)=>{
+app.get("/",(req,res)=>{
     console.log("login request received");
     res.render('login.ejs',{});
 })
