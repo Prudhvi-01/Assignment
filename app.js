@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname,"views"));
 
 
-mongoose.connect('mongodb+srv://prudhvi:oxHbUdozYPR0459t<password>@cluster0.97zyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
+mongoose.connect('MONGO_URL:mongodb+srv://tpoornamahesh:0m51eOsiiKHq6OKx@recacluster0.2joqrjw.mongodb.net/?retryWrites=true&w=majority&appName=RecaCluster0', 
     { useNewUrlParser: true, 
     useUnifiedTopology: true
  }).then(()=>{
