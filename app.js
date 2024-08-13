@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname,"views"));
 
 
-mongoose.connect('mongodb://localhost:27017/myschool', 
+mongoose.connect('mongodb+srv://prudhvi:oxHbUdozYPR0459t<password>@cluster0.97zyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
     { useNewUrlParser: true, 
     useUnifiedTopology: true
  }).then(()=>{
